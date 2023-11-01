@@ -1,6 +1,3 @@
-
-//hello this is alex
-
 import SwiftUI
 
 struct ContentView: View {
