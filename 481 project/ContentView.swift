@@ -4,17 +4,16 @@ struct ContentView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var isLoggedIn: Bool = false
-    @State private var showWelcomeView: Bool = false
 
     var body: some View {
         NavigationView {
             ZStack {
-                Color(red: 0, green: 0, blue: 50.0/255.0) // Dark navy blue
+                Color(red: 0, green: 0, blue: 50.0/255.0)
                     .edgesIgnoringSafeArea(.all)
 
                 if isLoggedIn {
-                    NavigationLink("", destination: WelcomeView(username: username, isLoggedIn: $isLoggedIn, showWelcomeView: $showWelcomeView), isActive: $showWelcomeView)
-                        .hidden()
+                    WelcomeView(username: username, isLoggedIn: $isLoggedIn)
+
                 } else {
                     VStack {
                         Text("Login")
@@ -23,25 +22,28 @@ struct ContentView: View {
 
                         TextField("Username", text: $username)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .foregroundColor(Color(red: 0, green: 0, blue: 50.0/255.0)) // Navy blue text color
+                            .foregroundColor(Color(red: 0, green: 0, blue: 50.0/255.0))
                             .padding()
 
                         SecureField("Password", text: $password)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .foregroundColor(Color(red: 0, green: 0, blue: 50.0/255.0)) // Navy blue text color
+                            .foregroundColor(Color(red: 0, green: 0, blue: 50.0/255.0))
                             .padding()
 
                         Button("Login") {
                             // Perform authentication here and set the 'isLoggedIn' state to true if successful
                             if performAuthentication() {
                                 isLoggedIn = true
-                                showWelcomeView = true // Activate the navigation link
                             }
                         }
                         .padding()
+                        .foregroundColor(.white)
                     }
                 }
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
         }
     }
 
