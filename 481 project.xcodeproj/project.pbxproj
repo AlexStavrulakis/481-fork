@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA8004FC2B02D52C004004C3 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8004FB2B02D52C004004C3 /* DeviceManager.swift */; };
+		BA82A8BE2B02BD66006CAE41 /* DeviceManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8BD2B02BD66006CAE41 /* DeviceManagementView.swift */; };
+		BA82A8C02B02BDB7006CAE41 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8BF2B02BDB7006CAE41 /* ManageAccountView.swift */; };
+		BA82A8C22B02BDC9006CAE41 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8C12B02BDC9006CAE41 /* SettingsView.swift */; };
+		BA82A8C42B02BE40006CAE41 /* AddDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8C32B02BE40006CAE41 /* AddDeviceView.swift */; };
+		BA82A8C62B02BE5B006CAE41 /* RemoveDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8C52B02BE5B006CAE41 /* RemoveDeviceView.swift */; };
+		BA82A8C82B02BE7F006CAE41 /* ViewDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8C72B02BE7F006CAE41 /* ViewDevicesView.swift */; };
 		BAB65F602AF1DFCA00200CF9 /* _81_projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB65F5F2AF1DFCA00200CF9 /* _81_projectApp.swift */; };
 		BAB65F622AF1DFCA00200CF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB65F612AF1DFCA00200CF9 /* ContentView.swift */; };
 		BAB65F642AF1DFCE00200CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB65F632AF1DFCE00200CF9 /* Assets.xcassets */; };
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA8004FB2B02D52C004004C3 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		BA82A8BD2B02BD66006CAE41 /* DeviceManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagementView.swift; sourceTree = "<group>"; };
+		BA82A8BF2B02BDB7006CAE41 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
+		BA82A8C12B02BDC9006CAE41 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BA82A8C32B02BE40006CAE41 /* AddDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceView.swift; sourceTree = "<group>"; };
+		BA82A8C52B02BE5B006CAE41 /* RemoveDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDeviceView.swift; sourceTree = "<group>"; };
+		BA82A8C72B02BE7F006CAE41 /* ViewDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDevicesView.swift; sourceTree = "<group>"; };
 		BAB65F5C2AF1DFCA00200CF9 /* 481 project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "481 project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB65F5F2AF1DFCA00200CF9 /* _81_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _81_projectApp.swift; sourceTree = "<group>"; };
 		BAB65F612AF1DFCA00200CF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +113,13 @@
 				BAB65F5F2AF1DFCA00200CF9 /* _81_projectApp.swift */,
 				BAB65F612AF1DFCA00200CF9 /* ContentView.swift */,
 				BAC6E47F2AF2DFEB001DF1F8 /* WelcomeView.swift */,
+				BA82A8BD2B02BD66006CAE41 /* DeviceManagementView.swift */,
+				BA82A8BF2B02BDB7006CAE41 /* ManageAccountView.swift */,
+				BA82A8C12B02BDC9006CAE41 /* SettingsView.swift */,
+				BA82A8C52B02BE5B006CAE41 /* RemoveDeviceView.swift */,
+				BA82A8C72B02BE7F006CAE41 /* ViewDevicesView.swift */,
+				BA82A8C32B02BE40006CAE41 /* AddDeviceView.swift */,
+				BA8004FB2B02D52C004004C3 /* DeviceManager.swift */,
 				BAB65F632AF1DFCE00200CF9 /* Assets.xcassets */,
 				BAB65F652AF1DFCE00200CF9 /* Preview Content */,
 			);
@@ -260,7 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA82A8C02B02BDB7006CAE41 /* ManageAccountView.swift in Sources */,
+				BA82A8C42B02BE40006CAE41 /* AddDeviceView.swift in Sources */,
+				BA82A8C62B02BE5B006CAE41 /* RemoveDeviceView.swift in Sources */,
+				BA8004FC2B02D52C004004C3 /* DeviceManager.swift in Sources */,
 				BAB65F622AF1DFCA00200CF9 /* ContentView.swift in Sources */,
+				BA82A8C82B02BE7F006CAE41 /* ViewDevicesView.swift in Sources */,
+				BA82A8BE2B02BD66006CAE41 /* DeviceManagementView.swift in Sources */,
+				BA82A8C22B02BDC9006CAE41 /* SettingsView.swift in Sources */,
 				BAC6E4802AF2DFEB001DF1F8 /* WelcomeView.swift in Sources */,
 				BAB65F602AF1DFCA00200CF9 /* _81_projectApp.swift in Sources */,
 			);
