@@ -5,6 +5,8 @@ struct AddDeviceView: View {
     @State private var deviceType: String = ""
     @State private var manufacturer: String = ""
 
+    @State private var lastDeviceID = 3 // Initial ID set to 3 as per your request
+
     @StateObject private var deviceManager = DeviceManager.shared
 
     var body: some View {
@@ -23,7 +25,7 @@ struct AddDeviceView: View {
                 Text("Entertainment").tag("Entertainment")
                 Text("Food").tag("Food")
                 Text("Medicine").tag("Medicine")
-                Text("Camera").tag("Camera")
+                Text("Security").tag("Security")
                 // Add more types as needed
             }
             .pickerStyle(MenuPickerStyle())
@@ -36,15 +38,14 @@ struct AddDeviceView: View {
                 .padding()
 
             Button("Add Device") {
-                // Generate a random ID (for simplicity, you might want to use a more robust method)
-                let randomID = UUID().uuidString
+                lastDeviceID += 1 // Increment the device ID
 
-                // Create a new device
+                // Create a new device with an incremented ID
                 let newDevice = Device(
                     name: deviceName,
                     type: deviceType,
                     manufacturer: manufacturer,
-                    id: randomID,
+                    id: "\(lastDeviceID)",
                     status: "Off"
                 )
 

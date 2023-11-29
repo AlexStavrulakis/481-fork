@@ -14,8 +14,10 @@ class DeviceManager: ObservableObject {
     static var shared = DeviceManager()
 
     @Published var devices: [Device] = [
-        Device(name: "Smart TV", type: "Entertainment", manufacturer: "ABC Corp", id: "12345", status: "On"),
-        Device(name: "Smart Refrigerator", type: "Food", manufacturer: "XYZ Inc", id: "67890", status: "Off"),
+        Device(name: "Smart TV", type: "Entertainment", manufacturer: "Sony", id: "1", status: "On"),
+        Device(name: "Smart Fridge", type: "Food", manufacturer: "Samsung", id: "2", status: "On"),
+        Device(name: "Medicine Dispenser", type: "Medicine", manufacturer: "WVU", id: "3", status: "On")
+        
         // Add more devices as needed
     ]
 
