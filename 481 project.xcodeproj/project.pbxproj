@@ -21,6 +21,8 @@
 		BAB65F712AF1DFCF00200CF9 /* _81_projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB65F702AF1DFCF00200CF9 /* _81_projectTests.swift */; };
 		BAB65F7B2AF1DFCF00200CF9 /* _81_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB65F7A2AF1DFCF00200CF9 /* _81_projectUITests.swift */; };
 		BAB65F7D2AF1DFCF00200CF9 /* _81_projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB65F7C2AF1DFCF00200CF9 /* _81_projectUITestsLaunchTests.swift */; };
+		BAB850172B1657B400C64FC9 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB850162B1657B400C64FC9 /* ChangePasswordView.swift */; };
+		BAB850192B16840B00C64FC9 /* EditAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB850182B16840B00C64FC9 /* EditAccountInfoView.swift */; };
 		BAC6E4802AF2DFEB001DF1F8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6E47F2AF2DFEB001DF1F8 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		BAB65F762AF1DFCF00200CF9 /* 481 projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "481 projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB65F7A2AF1DFCF00200CF9 /* _81_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _81_projectUITests.swift; sourceTree = "<group>"; };
 		BAB65F7C2AF1DFCF00200CF9 /* _81_projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _81_projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BAB850162B1657B400C64FC9 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		BAB850182B16840B00C64FC9 /* EditAccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountInfoView.swift; sourceTree = "<group>"; };
 		BAC6E47F2AF2DFEB001DF1F8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,8 @@
 				BA82A8C52B02BE5B006CAE41 /* RemoveDeviceView.swift */,
 				BA82A8C72B02BE7F006CAE41 /* ViewDevicesView.swift */,
 				BA82A8C32B02BE40006CAE41 /* AddDeviceView.swift */,
+				BAB850162B1657B400C64FC9 /* ChangePasswordView.swift */,
+				BAB850182B16840B00C64FC9 /* EditAccountInfoView.swift */,
 				BA8004FB2B02D52C004004C3 /* DeviceManager.swift */,
 				BAB65F632AF1DFCE00200CF9 /* Assets.xcassets */,
 				BAB65F652AF1DFCE00200CF9 /* Preview Content */,
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA82A8C02B02BDB7006CAE41 /* ManageAccountView.swift in Sources */,
+				BAB850172B1657B400C64FC9 /* ChangePasswordView.swift in Sources */,
 				BA82A8C42B02BE40006CAE41 /* AddDeviceView.swift in Sources */,
 				BA82A8C62B02BE5B006CAE41 /* RemoveDeviceView.swift in Sources */,
 				BA8004FC2B02D52C004004C3 /* DeviceManager.swift in Sources */,
@@ -290,6 +297,7 @@
 				BA82A8BE2B02BD66006CAE41 /* DeviceManagementView.swift in Sources */,
 				BA82A8C22B02BDC9006CAE41 /* SettingsView.swift in Sources */,
 				BAC6E4802AF2DFEB001DF1F8 /* WelcomeView.swift in Sources */,
+				BAB850192B16840B00C64FC9 /* EditAccountInfoView.swift in Sources */,
 				BAB65F602AF1DFCA00200CF9 /* _81_projectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

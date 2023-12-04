@@ -1,36 +1,72 @@
-// ManageAccountView.swift
 import SwiftUI
 
 struct ManageAccountView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @State private var showDeleteAlert = false
+    @State private var isAccountDeleted = false
 
     var body: some View {
-        ZStack {
-            Color(red: 0, green: 0, blue: 50.0/255.0)
-                .edgesIgnoringSafeArea(.all)
+        NavigationView {
+            ZStack {
+                Color(red: 0, green: 0, blue: 50.0/255.0)
+                    .edgesIgnoringSafeArea(.all)
 
-            VStack {
-                Text("Manage Account")
-                    .font(.title)
+                VStack {
+                    Text("Manage Account")
+                        
+                        .foregroundColor(.white)
+                        .padding()
+
+                
+                    // Edit accunt infoButton
+                    NavigationLink(destination: EditAccountInfoView()) {
+                                            Text("Edit Account Info")
+                                                .font(.headline)
+                                                .foregroundColor(.white)
+                                                .padding()
+                    }
+                    .font(.headline)
                     .foregroundColor(.white)
                     .padding()
 
-                // Add your account management content here
 
-                Spacer()
+                    // Change Password Button
+                    NavigationLink(destination: ChangePasswordView()) {
+                                            Text("Change Password")
+                                                .font(.headline)
+                                                .foregroundColor(.white)
+                                                .padding()
+                    }
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
 
-                // Custom back button
-                Button("Back") {
-                    presentationMode.wrappedValue.dismiss()
+                    Button("Delete Account") {
+                        showDeleteAlert.toggle()
+                    }
+                    .font(.headline)
+                    .foregroundColor(.red)
+                    .padding()
+                    .alert(isPresented: $showDeleteAlert) {
+                        Alert(
+                            title: Text("Delete Account"),
+                            message: Text("Are you sure you want to delete your account? This action cannot be undone."),
+                            primaryButton: .destructive(Text("Delete")) {
+                                isAccountDeleted = true
+                            },
+                            secondaryButton: .cancel()
+                        )
+                    }
+
+                    Spacer()
                 }
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
+            .background(
+                NavigationLink(destination: ContentView(), isActive: $isAccountDeleted) { EmptyView() }
+            )
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("", displayMode: .inline)
-        .navigationBarHidden(true)
     }
 }
 
