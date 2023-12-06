@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA5DAEEF2B1FFE3100BBCCBC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAEEE2B1FFE3100BBCCBC /* SignUpView.swift */; };
 		BA8004FC2B02D52C004004C3 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8004FB2B02D52C004004C3 /* DeviceManager.swift */; };
 		BA82A8BE2B02BD66006CAE41 /* DeviceManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8BD2B02BD66006CAE41 /* DeviceManagementView.swift */; };
 		BA82A8C02B02BDB7006CAE41 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82A8BF2B02BDB7006CAE41 /* ManageAccountView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA5DAEEE2B1FFE3100BBCCBC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BA8004FB2B02D52C004004C3 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		BA82A8BD2B02BD66006CAE41 /* DeviceManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManagementView.swift; sourceTree = "<group>"; };
 		BA82A8BF2B02BDB7006CAE41 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				BAB65F5F2AF1DFCA00200CF9 /* _81_projectApp.swift */,
 				BAB65F612AF1DFCA00200CF9 /* ContentView.swift */,
+				BA5DAEEE2B1FFE3100BBCCBC /* SignUpView.swift */,
 				BAC6E47F2AF2DFEB001DF1F8 /* WelcomeView.swift */,
 				BA82A8BD2B02BD66006CAE41 /* DeviceManagementView.swift */,
 				BA82A8BF2B02BDB7006CAE41 /* ManageAccountView.swift */,
@@ -295,6 +298,7 @@
 				BAB65F622AF1DFCA00200CF9 /* ContentView.swift in Sources */,
 				BA82A8C82B02BE7F006CAE41 /* ViewDevicesView.swift in Sources */,
 				BA82A8BE2B02BD66006CAE41 /* DeviceManagementView.swift in Sources */,
+				BA5DAEEF2B1FFE3100BBCCBC /* SignUpView.swift in Sources */,
 				BA82A8C22B02BDC9006CAE41 /* SettingsView.swift in Sources */,
 				BAC6E4802AF2DFEB001DF1F8 /* WelcomeView.swift in Sources */,
 				BAB850192B16840B00C64FC9 /* EditAccountInfoView.swift in Sources */,

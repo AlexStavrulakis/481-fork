@@ -8,6 +8,8 @@ struct AddDeviceView: View {
     @State private var lastDeviceID = 3 // Initial ID set to 3 as per your request
 
     @StateObject private var deviceManager = DeviceManager.shared
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
+
 
     var body: some View {
         VStack {
@@ -62,7 +64,7 @@ struct AddDeviceView: View {
 
             Spacer()
         }
-        .background(Color(red: 0, green: 0, blue: 50.0/255.0).edgesIgnoringSafeArea(.all))
+        .background(Color(selectedColor).edgesIgnoringSafeArea(.all))
         .navigationBarTitle("Add Device", displayMode: .inline)
         .foregroundColor(.white)
     }

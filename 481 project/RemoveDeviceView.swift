@@ -3,6 +3,7 @@ import SwiftUI
 struct RemoveDeviceView: View {
     @StateObject private var deviceManager = DeviceManager.shared
     @State private var selectedDevice: String = ""
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
 
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct RemoveDeviceView: View {
 
             Spacer()
         }
-        .background(Color(red: 0, green: 0, blue: 50.0/255.0).edgesIgnoringSafeArea(.all))
+        .background(Color(selectedColor).edgesIgnoringSafeArea(.all))
         .navigationBarTitle("Remove Device", displayMode: .inline)
         .foregroundColor(.white)
     }

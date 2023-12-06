@@ -6,6 +6,8 @@ struct ChangePasswordView: View {
     @State private var confirmNewPassword = ""
     @State private var showAlert = false
     @State private var successMessage = ""
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
+
 
     var passwordsMatch: Bool {
         return newPassword == confirmNewPassword
@@ -13,7 +15,7 @@ struct ChangePasswordView: View {
 
     var body: some View {
         ZStack {
-            Color(red: 0, green: 0, blue: 50.0/255.0)
+            Color(selectedColor)
                 .edgesIgnoringSafeArea(.all)
 
             VStack {

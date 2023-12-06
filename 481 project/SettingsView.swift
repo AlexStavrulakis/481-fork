@@ -1,36 +1,51 @@
-// SettingsView.swift
 import SwiftUI
 
 struct SettingsView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var deviceManager = DeviceManager.shared
+    @State private var isColorConfirmed = false
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
 
+    
     var body: some View {
-        ZStack {
-            Color(red: 0, green: 0, blue: 50.0/255.0)
-                .edgesIgnoringSafeArea(.all)
-
-            VStack {
-                Text("Settings")
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .padding()
-
-                // Add your settings content here
-
-                Spacer()
-
-                // Custom back button
-                Button("Back") {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                .font(.headline)
+        VStack {
+            Text("Settings")
+                .font(.title)
                 .foregroundColor(.white)
                 .padding()
+            
+            // Dropdown to select background color
+            Picker(selection: $selectedColor, label: Text("Change Background Color")) {
+                Text("Black").tag(UIColor.black.cgColor)
+                Text("Blue").tag(UIColor.blue.cgColor)
+                Text("Yellow").tag(UIColor.yellow.cgColor)
+                Text("Grey").tag(UIColor.darkGray.cgColor)
+
+                // Add more colors as needed
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .foregroundColor(.white)
+            .padding()
+            
+            // Confirm button to apply the selected color
+            Button("Confirm") {
+                deviceManager.backgroundColor = selectedColor
+                isColorConfirmed = true
+            }
+            .foregroundColor(.white)
+            .padding()
+            
+            Spacer()
+            
+            // Show confirmation message if color is confirmed
+            if isColorConfirmed {
+                Text("Color updated successfully!")
+                    .foregroundColor(.green)
+                    .padding()
             }
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarTitle("", displayMode: .inline)
-        .navigationBarHidden(true)
+        .background(Color(selectedColor).edgesIgnoringSafeArea(.all))
+        .navigationBarTitle("Settings", displayMode: .inline)
+        .navigationBarHidden(false)
     }
 }
 

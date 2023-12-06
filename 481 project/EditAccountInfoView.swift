@@ -9,31 +9,25 @@ struct EditAccountInfoView: View {
     @State private var isEditingLastName = false
     @State private var isEditingUsername = false
     @State private var isEditingEmail = false
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
+
 
     var body: some View {
         ZStack {
-            Color(red: 0, green: 0, blue: 50.0/255.0)
+            Color(selectedColor)
                 .edgesIgnoringSafeArea(.all)
+            
+            
 
             VStack {
-                Button(action: { isEditingFirstName.toggle() }) {
-                    Text("First Name: \(firstName)")
-                        .foregroundColor(.white)
-                }
-                .sheet(isPresented: $isEditingFirstName) {
-                    EditInfoView(info: $firstName)
-                }
+                Text("Edit Account Info")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding()
 
-                Button(action: { isEditingLastName.toggle() }) {
-                    Text("Last Name: \(lastName)")
-                        .foregroundColor(.white)
-                }
-                .sheet(isPresented: $isEditingLastName) {
-                    EditInfoView(info: $lastName)
-                }
 
                 Button(action: { isEditingUsername.toggle() }) {
-                    Text("Username: \(username)")
+                    Text("Username \(username)")
                         .foregroundColor(.white)
                 }
                 .sheet(isPresented: $isEditingUsername) {
@@ -41,7 +35,7 @@ struct EditAccountInfoView: View {
                 }
 
                 Button(action: { isEditingEmail.toggle() }) {
-                    Text("Email: \(email)")
+                    Text("Email \(email)")
                         .foregroundColor(.white)
                 }
                 .sheet(isPresented: $isEditingEmail) {

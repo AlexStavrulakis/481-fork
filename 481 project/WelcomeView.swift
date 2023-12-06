@@ -3,10 +3,13 @@ import SwiftUI
 struct WelcomeView: View {
     var username: String
     @Binding var isLoggedIn: Bool
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
+    @EnvironmentObject var loggedInUser: LoggedInUser
+
 
     var body: some View {
         ZStack {
-            Color(red: 0, green: 0, blue: 50.0/255.0)
+            Color(selectedColor)
                 .edgesIgnoringSafeArea(.all)
 
             VStack {

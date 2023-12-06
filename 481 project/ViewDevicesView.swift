@@ -3,10 +3,12 @@ import SwiftUI
 struct ViewDevicesView: View {
     @StateObject private var deviceManager = DeviceManager.shared
     @Environment(\.presentationMode) var presentationMode
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
+
 
     var body: some View {
         ZStack {
-            Color(red: 0, green: 0, blue: 50.0/255.0)
+            Color(selectedColor)
                 .edgesIgnoringSafeArea(.all)
 
             VStack {

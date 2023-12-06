@@ -2,11 +2,13 @@ import SwiftUI
 
 struct DeviceManagementView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var selectedColor: CGColor = DeviceManager.shared.backgroundColor
+
 
     var body: some View {
         NavigationView {
             ZStack {
-                Color(red: 0, green: 0, blue: 50.0/255.0)
+                Color(selectedColor)
                     .edgesIgnoringSafeArea(.all)
 
                 VStack {
